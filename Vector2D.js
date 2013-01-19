@@ -109,6 +109,12 @@
         return this;
       };
 
+      Vector2D.prototype.multiply = function(vector) {
+        this.x *= vector.x;
+        this.y *= vector.y;
+        return this;
+      };
+
       return Vector2D;
 
     })();

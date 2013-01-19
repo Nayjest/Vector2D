@@ -79,6 +79,13 @@ define [], ()->
       @y *= val
       @
 
+    multiply: (vector)->
+      @x *= vector.x
+      @y *= vector.y
+      @
+
+
+
 
 
 
