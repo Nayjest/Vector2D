@@ -8,6 +8,8 @@ define [], ()->
     @cloneFrom: (object)->
       new Vector2D object.x, object.y
 
+    @zero: new Vector2D 0,0
+
     constructor: (x, y)->
       @x = x or 0
       @y = y or 0
@@ -15,6 +17,11 @@ define [], ()->
     add: (vector) ->
       @x += vector.x
       @y += vector.y
+      @
+
+    addScalar: (val)->
+      @x += val
+      @y += val
       @
 
     eq: (vector)->
@@ -83,6 +90,22 @@ define [], ()->
       @x *= vector.x
       @y *= vector.y
       @
+
+    divide: (vector)->
+      @x /= vector.x
+      @y /= vector.y
+      @
+
+    divideScalar: (val)->
+      @x /= val
+      @y /= val
+      @
+
+    round: ->
+      @x = Math.round @x
+      @y = Math.round @y
+      @
+
 
 
 

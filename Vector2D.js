@@ -15,6 +15,8 @@
         return new Vector2D(object.x, object.y);
       };
 
+      Vector2D.zero = new Vector2D(0, 0);
+
       function Vector2D(x, y) {
         this.x = x || 0;
         this.y = y || 0;
@@ -23,6 +25,12 @@
       Vector2D.prototype.add = function(vector) {
         this.x += vector.x;
         this.y += vector.y;
+        return this;
+      };
+
+      Vector2D.prototype.addScalar = function(val) {
+        this.x += val;
+        this.y += val;
         return this;
       };
 
@@ -112,6 +120,24 @@
       Vector2D.prototype.multiply = function(vector) {
         this.x *= vector.x;
         this.y *= vector.y;
+        return this;
+      };
+
+      Vector2D.prototype.divide = function(vector) {
+        this.x /= vector.x;
+        this.y /= vector.y;
+        return this;
+      };
+
+      Vector2D.prototype.divideScalar = function(val) {
+        this.x /= val;
+        this.y /= val;
+        return this;
+      };
+
+      Vector2D.prototype.round = function() {
+        this.x = Math.round(this.x);
+        this.y = Math.round(this.y);
         return this;
       };
 
