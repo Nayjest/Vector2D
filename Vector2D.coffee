@@ -5,6 +5,9 @@ define [], ()->
   ###
   class Vector2D
 
+    @cloneFrom: (object)->
+      new Vector2D object.x, object.y
+
     constructor: (x, y)->
       @x = x or 0
       @y = y or 0
@@ -24,6 +27,7 @@ define [], ()->
 
     clone: ->
       new Vector2D @x, @y
+
 
     set: (vector)->
       @x = vector.x

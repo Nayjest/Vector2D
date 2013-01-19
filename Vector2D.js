@@ -11,6 +11,10 @@
     var Vector2D;
     return Vector2D = (function() {
 
+      Vector2D.cloneFrom = function(object) {
+        return new Vector2D(object.x, object.y);
+      };
+
       function Vector2D(x, y) {
         this.x = x || 0;
         this.y = y || 0;
