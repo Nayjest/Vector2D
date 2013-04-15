@@ -1,7 +1,7 @@
 {
   "About this file": "Bower package",
   "name": "Vector2D",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Vitalii [Nayjest] Stepanenko <gmail@vitaliy.in>",
   "main": "./Vector2D.js",
   "dependencies": {
