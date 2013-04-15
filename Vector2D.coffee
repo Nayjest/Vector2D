@@ -7,6 +7,8 @@ define [], ()->
 
     @cloneFrom: (object)->
       new Vector2D object.x, object.y
+    @fromArray: (array)->
+      new Vector2D array[0], array[1]
 
     @zero: new Vector2D 0,0
 
