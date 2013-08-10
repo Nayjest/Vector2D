@@ -27,7 +27,7 @@ define [], ()->
       @
 
     eq: (vector)->
-      vactor.x == @x and vector.y == @y
+      vector.x == @x and vector.y == @y
 
     substract: (vector) ->
       @x -= vector.x
@@ -78,7 +78,7 @@ define [], ()->
       @setValues @x * cos - @y * sin, @x * sin + @y * cos
 
     angleTo: (vector)->
-      Math.atan2 vactor.y - @y, vector.x - @x
+      Math.atan2 vector.y - @y, vector.x - @x
 
     rotateAround: (point, angle)->
       @substract(point).rotate(angle).add(point)
